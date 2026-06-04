@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.player-score,
+.computer-score {
+    text-align: center;
+}
+
+.player-score h2,
+.computer-score h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.player-score p,
+.computer-score p {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.score-separator {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffff00;
+}
+
+.game-instructions {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.game-instructions p {
+    margin-bottom: 15px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#pongCanvas {
+    border: 3px solid white;
+    background: #000;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .scoreboard {
+        gap: 20px;
+    }
+
+    .player-score p,
+    .computer-score p {
+        font-size: 2rem;
+    }
+
+    #pongCanvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
